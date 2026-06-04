@@ -1,0 +1,234 @@
+.contacts_page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 140px 60px 100px 60px;
+}
+
+.contacts_sup {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+}
+
+.contacts_title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+/* ─── MAIN BLOCK: MAP + INFO ─── */
+.contacts_main {
+  background: #23233a;
+  border-radius: 36px;
+  overflow: hidden;
+  display: flex;
+  min-height: 560px;
+  margin-bottom: 48px;
+}
+
+/* MAP */
+.contacts_map_wrap {
+  flex: 1;
+  min-height: 560px;
+  position: relative;
+  background: #1a1a2e;
+}
+
+.contacts_map_wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* INFO PANEL */
+.contacts_info {
+  width: 420px;
+  flex-shrink: 0;
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contacts_info_title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.contacts_block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacts_block_label {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contacts_block_value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.contacts_block_sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Divider */
+.contacts_divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 -4px;
+}
+
+/* Route badges */
+.route_list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.route_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.route_badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rb_metro {
+  background: rgba(239, 68, 68, 0.15);
+}
+.rb_bus {
+  background: rgba(0, 200, 100, 0.12);
+}
+.rb_car {
+  background: rgba(1, 75, 255, 0.15);
+}
+
+.route_text {
+  flex: 1;
+}
+
+.route_time {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.route_desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* Call button */
+.contacts_call_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 52px;
+  border-radius: 100px;
+  background: #014bff;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: Nunito, sans-serif;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.18s;
+  margin-top: 8px;
+}
+
+.contacts_call_btn:hover {
+  background: #0040e0;
+  transform: translateY(-2px);
+}
+
+/* ─── INFO CARDS ROW ─── */
+.contacts_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contacts_card {
+  background: #23233a;
+  border-radius: 24px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contacts_card_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.cci_blue {
+  background: rgba(1, 75, 255, 0.15);
+}
+.cci_green {
+  background: rgba(0, 200, 100, 0.12);
+}
+.cci_yellow {
+  background: rgba(206, 222, 89, 0.12);
+}
+
+.contacts_card_label {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contacts_card_value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.contacts_card_sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: -4px;
+}

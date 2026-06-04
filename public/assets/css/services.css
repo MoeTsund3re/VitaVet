@@ -1,0 +1,282 @@
+/* ─── SERVICES PAGE ─── */
+.services_page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 140px 50px 100px 50px;
+}
+
+.services_page_title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.services_page_subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 70px;
+}
+
+/* ─── DEPARTMENTS GRID ─── */
+/* Two blocks, each: [col-left: two cards stacked] [col-center: one tall card] [col-right: two cards stacked] */
+.dept_block {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 75px;
+  align-items: stretch;
+}
+
+/* Left column: two 450x200 cards stacked with 30px gap */
+.dept_col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+/* Center column: one tall 350x430 card */
+.dept_col_center {
+  flex-shrink: 0;
+}
+
+/* ─── BASE CARD ─── */
+.dept_card {
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.dept_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Small horizontal cards: 450x200 */
+.dept_card_sm {
+  width: 450px;
+  height: 200px;
+}
+
+/* Tall center card: 350x430 */
+.dept_card_lg {
+  width: 350px;
+  height: 430px;
+}
+
+/* ─── CARD COLORS ─── */
+.bg_pink {
+  background-color: #e697a2;
+}
+.bg_green {
+  background-color: #00c864;
+}
+.bg_yellow {
+  background-color: #cede59;
+}
+.bg_teal {
+  background-color: #059e8c;
+}
+.bg_blue {
+  background-color: #014bff;
+}
+.bg_orange {
+  background-color: #ff8c42;
+}
+.bg_purple {
+  background-color: #8b5cf6;
+}
+.bg_red {
+  background-color: #ef4444;
+}
+.bg_sky {
+  background-color: #38bdf8;
+}
+.bg_lime {
+  background-color: #a3e635;
+}
+
+/* ─── CARD LABEL ─── */
+.dept_label {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1b1b29;
+  z-index: 2;
+  position: relative;
+}
+
+.dept_label_white {
+  color: #ffffff;
+}
+
+/* ─── CARD INNER LAYOUT ─── */
+/* img-left, text-right */
+.card_inner_lr {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.card_inner_lr .dept_label {
+  padding: 0 24px;
+  flex: 1;
+}
+
+/* img-right, text-left */
+.card_inner_rl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.card_inner_rl .dept_label {
+  padding: 24px 0 24px 24px;
+  flex: 1;
+  align-self: flex-start;
+}
+
+/* Tall card: img on top area, text bottom-right */
+.card_inner_tall {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.card_inner_tall .dept_label {
+  position: absolute;
+  bottom: 24px;
+  right: 20px;
+  text-align: right;
+  max-width: 160px;
+}
+
+/* Tall card reversed: text bottom-left */
+.card_inner_tall_rev .dept_label {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  text-align: left;
+  max-width: 160px;
+  right: auto;
+}
+
+/* ─── CARD IMAGES ─── */
+.dept_img {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Diagnostika: 229x200, left, flush bottom */
+.img_diagnostika {
+  width: 229px;
+  height: 200px;
+  object-position: bottom;
+  align-self: flex-end;
+}
+
+/* Vakcinaciya: 280x212, left, overflows bottom */
+.img_vakcinaciya {
+  width: 280px;
+  height: 212px;
+  align-self: flex-end;
+  margin-bottom: -12px;
+}
+
+/* Terapiya: 272x403, tall card image, centered */
+.img_terapiya {
+  width: 272px;
+  height: 403px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  z-index: 1;
+}
+
+/* Stomatologiya: 312x174, right corner, overflows bottom */
+.img_stomatologiya {
+  width: 312px;
+  height: 174px;
+  align-self: flex-end;
+  margin-bottom: -10px;
+  margin-right: 0;
+}
+
+/* Onkologiya: 208x194, right corner flush */
+.img_onkologiya {
+  width: 208px;
+  height: 194px;
+  align-self: flex-end;
+  margin-right: 0;
+}
+
+/* Hirurgiya: 260x200 tall card */
+.img_hirurgiya {
+  width: 260px;
+  height: 370px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* Dermatologiya: 240x190, left, flush bottom */
+.img_dermatologiya {
+  width: 240px;
+  height: 190px;
+  align-self: flex-end;
+}
+
+/* Oftalmologiya: 220x200, right corner */
+.img_oftalmologiya {
+  width: 220px;
+  height: 200px;
+  align-self: flex-end;
+  margin-right: 0;
+}
+
+/* Travmatologiya: 250x200, left */
+.img_travmatologiya {
+  width: 250px;
+  height: 190px;
+  align-self: flex-end;
+  margin-bottom: -8px;
+}
+
+/* Kardiologiya: 220x190, right */
+.img_kardiologiya {
+  width: 220px;
+  height: 190px;
+  align-self: flex-end;
+  margin-right: 0;
+}
+
+/* ─── SECTION HEADER ─── */
+.services_section_title {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 40px;
+}
+
+/* placeholder animal images using SVG illustrations embedded as bg */
+.dept_card .dept_img_placeholder {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}

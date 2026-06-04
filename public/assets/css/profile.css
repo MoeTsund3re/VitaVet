@@ -1,0 +1,795 @@
+/* ═══════════════════════════════════
+   PROFILE PAGES  (profile.css)
+   ═══════════════════════════════════ */
+
+/* ─── PAGE WRAPPER ─── */
+.profile_page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 60px 100px 60px;
+  min-height: 100vh;
+}
+
+/* ─── PROFILE LAYOUT ─── */
+.profile_layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ─── SIDEBAR ─── */
+.profile_sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 110px;
+}
+
+.profile_user_card {
+  background: #23233a;
+  border-radius: 24px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile_avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #014bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.profile_user_name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+.profile_user_email {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  margin-top: -6px;
+}
+
+.profile_nav {
+  background: #23233a;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_nav_item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  border: none;
+  background: none;
+  text-align: left;
+  text-decoration: none;
+}
+
+.profile_nav_item:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+.profile_nav_item.active {
+  background: rgba(1,75,255,0.15);
+  color: #014bff;
+}
+
+.profile_nav_icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.profile_nav_item.active .profile_nav_icon {
+  opacity: 1;
+}
+
+/* ─── MAIN CONTENT ─── */
+.profile_main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ─── SECTION TITLE ─── */
+.profile_section_title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.profile_section_sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 8px;
+}
+
+/* ─── EMPTY STATE (no pet selected) ─── */
+.profile_empty {
+  background: #23233a;
+  border-radius: 28px;
+  padding: 72px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.profile_empty_icon {
+  font-size: 72px;
+  line-height: 1;
+}
+
+.profile_empty_title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.profile_empty_text {
+  font-size: 17px;
+  color: rgba(255,255,255,0.5);
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.profile_create_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 32px;
+  border-radius: 100px;
+  background: #014bff;
+  color: #fff;
+  font-size: 17px;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.18s;
+  margin-top: 8px;
+}
+
+.profile_create_btn:hover {
+  background: #0040e0;
+  transform: translateY(-2px);
+}
+
+/* ─── PET SWITCHER ─── */
+.pet_switcher {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.pet_tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #23233a;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-family: Nunito, sans-serif;
+}
+
+.pet_tab:hover {
+  border-color: rgba(1,75,255,0.4);
+}
+
+.pet_tab.active {
+  border-color: #014bff;
+  background: rgba(1,75,255,0.12);
+}
+
+.pet_tab_emoji {
+  font-size: 22px;
+}
+
+.pet_tab_name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.pet_tab_breed {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+}
+
+.pet_tab_add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #23233a;
+  border: 2px dashed rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.4);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.pet_tab_add:hover {
+  border-color: #014bff;
+  color: #014bff;
+}
+
+/* ─── PET HERO CARD ─── */
+.pet_hero {
+  background: linear-gradient(135deg, #014bff 0%, #0a2fa8 100%);
+  border-radius: 28px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pet_hero::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: -30px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.pet_hero_emoji {
+  font-size: 72px;
+  line-height: 1;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.pet_hero_info {
+  z-index: 1;
+  flex: 1;
+}
+
+.pet_hero_name {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.pet_hero_meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pet_hero_badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+}
+
+.pet_hero_badge span:first-child {
+  opacity: 0.6;
+}
+
+.pet_hero_edit {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Nunito, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  align-self: flex-start;
+  backdrop-filter: blur(4px);
+}
+
+.pet_hero_edit:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ─── INFO GRID ─── */
+.info_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info_card {
+  background: #23233a;
+  border-radius: 20px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info_card_label {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.info_card_value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.info_card_sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ─── NEXT APPOINTMENT ─── */
+.next_appt {
+  background: #23233a;
+  border-radius: 24px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-left: 4px solid #014bff;
+}
+
+.next_appt_icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.next_appt_info {
+  flex: 1;
+}
+
+.next_appt_label {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.next_appt_title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.next_appt_meta {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+}
+
+.next_appt_btn {
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: #014bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Nunito, sans-serif;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.18s;
+  white-space: nowrap;
+}
+
+.next_appt_btn:hover {
+  background: #0040e0;
+  transform: translateY(-1px);
+}
+
+/* ─── SECTION BLOCK ─── */
+.profile_block {
+  background: #23233a;
+  border-radius: 24px;
+  padding: 28px 32px;
+}
+
+.profile_block_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.profile_block_title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.profile_block_link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #014bff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.profile_block_link:hover { opacity: 0.75; }
+
+/* ─── VISIT HISTORY ─── */
+.visit_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.visit_item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.visit_item:last-child { border-bottom: none; }
+
+.visit_date_block {
+  text-align: center;
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.visit_date_day {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.visit_date_month {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.visit_dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #014bff;
+  flex-shrink: 0;
+}
+
+.visit_info {
+  flex: 1;
+}
+
+.visit_type {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.visit_doctor {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+}
+
+.visit_tag {
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tag_green { background: rgba(0,200,100,0.15); color: #00c864; }
+.tag_blue  { background: rgba(1,75,255,0.15);  color: #4d90ff; }
+.tag_yellow{ background: rgba(206,222,89,0.15); color: #c8d847; }
+.tag_red   { background: rgba(239,68,68,0.15);  color: #ef4444; }
+
+/* ─── DISEASE HISTORY ─── */
+.disease_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.disease_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.disease_icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.disease_info { flex: 1; }
+
+.disease_name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.disease_meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 6px;
+}
+
+.disease_status {
+  display: inline-flex;
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ─── VACCINATIONS TABLE ─── */
+.vacc_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.vacc_row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.vacc_row:last-child { border-bottom: none; }
+
+.vacc_name {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.vacc_date {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  min-width: 100px;
+  text-align: right;
+}
+
+.vacc_next {
+  font-size: 13px;
+  color: #014bff;
+  min-width: 110px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.vacc_ok {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0,200,100,0.15);
+  color: #00c864;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ─── CREATE PET FORM ─── */
+.create_pet_page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 120px 60px 100px;
+}
+
+.create_pet_back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 36px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.create_pet_back:hover { color: #fff; }
+
+.create_pet_title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.create_pet_sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 40px;
+}
+
+.form_card {
+  background: #23233a;
+  border-radius: 24px;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_field.full { grid-column: 1 / -1; }
+
+.form_label {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.form_input,
+.form_select {
+  height: 52px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 0 18px;
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+  color: #fff;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.form_input::placeholder { color: rgba(255,255,255,0.25); }
+
+.form_input:focus,
+.form_select:focus {
+  border-color: #014bff;
+  background: rgba(1,75,255,0.08);
+}
+
+.form_select option {
+  background: #1b1b29;
+  color: #fff;
+}
+
+/* Emoji picker */
+.emoji_picker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.emoji_option {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 2px solid transparent;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.emoji_option:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.emoji_option.selected {
+  border-color: #014bff;
+  background: rgba(1,75,255,0.15);
+}
+
+.form_submit {
+  height: 56px;
+  border-radius: 100px;
+  background: #014bff;
+  color: #fff;
+  font-size: 18px;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.18s;
+  margin-top: 8px;
+}
+
+.form_submit:hover {
+  background: #0040e0;
+  transform: translateY(-2px);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1100px) {
+  .info_grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+  .profile_layout { flex-direction: column; }
+  .profile_sidebar { width: 100%; position: static; }
+  .info_grid { grid-template-columns: 1fr 1fr; }
+}
